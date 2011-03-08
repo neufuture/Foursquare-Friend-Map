@@ -1,0 +1,16 @@
+#map_canvas{
+	width:  970px;
+	height: 510px;
+}
+.info{
+	width: 200px;
+	height: 110px;
+	overflow: hidden;
+	font: 12px helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+.info img{
+	float: left;
+	margin-right: 10px;
+}
