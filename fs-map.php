@@ -21,7 +21,7 @@ $friends = $fullJson[response][recent];
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 	var info = new google.maps.InfoWindow();
  
-    <?php foreach($friends as $value): ?>
+    <?php foreach($friends as $value): if($value[venue][location][lat]):?>
     <?php
     // PHP reference for time http://us.php.net/manual/en/datetime.createfromformat.php
        	if(date("ymd", $value[createdAt]) == date("ymd", time())) $day = "today";
@@ -55,6 +55,6 @@ $friends = $fullJson[response][recent];
 		
 	});
     
-    <?php endforeach; ?>
+    <?php endif; endforeach; ?>
     
   }
